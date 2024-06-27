@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<title>StartWell - Best Place to work</title>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta name="format-detection" content="telephone=no">
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="author" content="">
+	    <meta name="keywords" content="">
+	    <meta name="description" content="">
+
+	    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+	    <link rel="stylesheet" type="text/css" href="fonts/fonts.css">
+	    <link rel="stylesheet" type="text/css" href="fonts/icomoon/icomoon.css">
+	    <link rel="stylesheet" type="text/css" href="css/vendor.css">
+	    <link rel="stylesheet" type="text/css" href="style.css">
+
+		<!-- script
+		================================================== -->
+		<script src="js/modernizr.js"></script>
+        <script src="js/timer.js"></script>
+
+		<script>
+let loginForm = document.getElementById("loginForm");
+
+loginForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  let username = document.getElementById("username");
+  let email = document.getElementById("email");
+
+  document.getElementById('date').value = Date();
+  document.getElementById('time1').value = Time();
+  document.getElementById('time2').value = Time();
+
+//   document.getElementById('date').value = (new Date()).format("m/dd/yy");
+  if (username.value == "" || email.value == "") {
+	alert("Ensure you input a value in both fields!");
+  } else {
+	// perform operation with form input
+	alert("This form has been successfully submitted!");
+	console.log(
+	  `This form has a username of ${username.value} and email of ${email.value}`
+	);
+
+	username.value = "";
+	email.value = "";
+  }
+});
+		</script>
+		
+	</head>
+
+<body class="bg-body">
+
+<div class="preloader">
+  <div class="loader">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+</div>
+
+<div class="search-box">
+  <div class="search-wrap">
+    <div class="close-button">
+      <i class="icon icon-cancel"></i>
+    </div>
+    <form id="search-form" class="text-center" action="" method="">
+      <input type="text" class="search-input" placeholder="Search..." />
+      <i class="icon icon-search"></i>
+    </form>
+  </div>
+</div>
+
+<header id="header">
+	<div class="header-wrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+
+					<div class="col-md-2">
+						<div class="main-logo">
+							<a href="index.html"><img src="images/startwell_.png" alt="logo" width="350px"></a>
+					
+						</div>
+					</div>
+
+					<div class="col-md-10 col-xs-6">
+						<nav id="navbar">
+							<div class="main-menu stellarnav">
+								<ul class="menu-list">
+									<li class="menu-item active"><a href="index.html" class="active">Home</a></li>
+									
+									<li class="menu-item"><a href="about.html" class="nav-link">Category</a></li>
+									<li class="menu-item"><a href="services.html" class="nav-link">Services</a></li>
+								
+									<li class="menu-item"><a href="contact.html" class="nav-link">Contact</a></li>
+								</ul>
+	
+							</div>
+							
+							<div class="btn-search">
+								<i class="icon icon-search"></i>
+							</div>
+	
+							<div class="hamburger">
+								<span class="bar"></span>
+								<span class="bar"></span>
+								<span class="bar"></span>
+							</div>
+	
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</header>
+
+<section >
+	<div class="bookpaydesign">
+		<div class="bookpay">
+		
+                  
+			<div class="bookdetails">
+				<h1 class="page-title" >Book Details</h1>
+			
+			 
+			  <hr>
+			  
+			  <div>
+			  <form action="" id="loginForm">
+			  <h2>Reservation Online </h2>
+			  <div>
+			  <p>Your Name</p>
+			  <input type="text" placeholder="Your Name" name="username">
+			  </div>
+			  <div>
+			  <p>Your email</p>
+			  <input type="email" placeholder="Your email" name="email">
+			  </div>
+			  <div>
+				<p>Select option</p>
+				<select name="select" id="#">
+				<option value="1">Private offices </option>
+				<option value="2">Dedicated Desk</option>
+				<option value="3">Conferenece Rooms</option>
+				<option value="4">Training Rooms</option>
+				<option value="10">Meeting Rooms</option>
+				
+				</select>
+				</div>
+			  <div>
+			  <p>Date</p>
+			  <input type="date" name="date">
+			  </div>
+			  <div>
+			  <p>Time: From</p>
+			  <input type="time" name="time1">
+			  <p>Time:  To</p>
+			  <input type="time"name="time1">
+			  </div>
+			  <div>
+			  <p>How many people?</p>
+			  <select name="select" id="#">
+			  <option value="1">1 </option>
+			  <option value="2">2</option>
+			  <option value="3">3 </option>
+			  <option value="4">5</option>
+			  <option value="10">10</option>
+			  <option value="10+">10+</option>
+			  </select>
+			  </div>
+			  <div>
+				<p>Location</p>
+				<select name="select" id="#">
+				<option value="1">350 Bay street</option>
+				<option value="2">212 King street</option>
+				<option value="3">Placer Ct , North York</option>
+				<option value="4">Carlingview Dr</option>
+				
+				</select>
+			  </div>
+			  <button formaction="payment.html" type="submit">Pay Now</button>
+			  </form>
+			  </div>
+			  </div>
+			  </div>
+			  <div style="text-align: center; background-color: white;">
+				<h2>Time Open</h2>
+				<div> <div>
+				  <h3>Monday-Friday</h3>
+				  <p>4 am - 11 pm </p>
+				  
+				</div>
+				<div> <h3>Saturday and sunday</h3>
+				  <p>6 am - 6 pm </p>
+				  </div></div>
+		</div>
+		
+			
+	</div>
+	
+				
+</section>
+<hr>
+<button id="scrollToTopBtn">
+	<span>Top</span>
+</button>
+
+
+
+
+
+<footer id="footer" class="padding-large" data-aos="fade-up">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-4 col-sm-6">
+				<div class="company-brand">
+					<img src="images/startwell_.png" alt="logo" class="footer-logo">
+						</div>
+			</div>
+
+			<div class="col-md-2 col-sm-6">
+				<h5>Quick Links</h5>
+				<ul class="menu-list">
+					<li class="menu-item">
+						<a href="index.html">Home</a>
+					</li>
+					<li class="menu-item">
+						<a href="about.html">About</a>
+					</li>
+                    <li class="menu-item">
+						<a href="services.html">Services</a>
+
+					</li>
+					<li class="menu-item">
+						<a href="contact.html">Contact</a>
+					</li>
+					
+												
+				</ul>
+			</div>
+            <div class="col-md-3 col-sm-6">
+				<h5>Get in Touch</h5>
+				<ul>
+					<li><a href="#" class="email">info@startwell.com</a></li>
+					<li>15th king street, Toronto, CANADA</li>
+					<li>011-554-8798</li>
+				</ul>
+			</div>
+
+		
+		</div>
+	</div>
+</footer>
+
+<div id="footer-bottom" class="padding-small">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+
+				<div class="row">
+				
+					<div class="col-md-6">
+						<div class="copyright">
+							<p>© 2023 All rights reserved.</p>
+						</div>
+					</div>
+					
+					<div class="col-md-6">
+						<div class="social-links">
+							<ul>
+								<li>
+									<a href="https://www.facebook.com/"><i class="icon icon-facebook"></i></a>
+								</li>
+								<li>
+									<a href="https://twitter.com/"><i class="icon icon-twitter"></i></a>
+								</li>
+								<li>
+									<a href="https://www.youtube.com/"><i class="icon icon-youtube-play"></i></a>
+								</li>
+								
+							</ul>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>	
+	</div>
+</div>
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/slideNav.min.js"></script>
+<script src="js/script.js"></script>	
+
+</body>
+</html>	
